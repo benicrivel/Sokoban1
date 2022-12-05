@@ -1,0 +1,635 @@
+fileFormatVersion: 2
+guid: d73965ed14225524aadc7e0b97a165e9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7628772164619075379
+    second: RemoveAds_Line
+  - first:
+      213: -3103724069776517121
+    second: VibrationMode_Line
+  - first:
+      213: 4015319765583378309
+    second: List_Line
+  - first:
+      213: -5088776652133581648
+    second: Home_Line
+  - first:
+      213: -8013051409119943178
+    second: MusicOn_Line
+  - first:
+      213: -3486631863397033891
+    second: MusicOff_Line
+  - first:
+      213: -8136604752494012461
+    second: SoundOff_Line
+  - first:
+      213: -7514668333704961266
+    second: SoundOn_Line
+  - first:
+      213: 3201417858761528694
+    second: Check_Line
+  - first:
+      213: 5911811872903482788
+    second: Uncheck_Line
+  - first:
+      213: -8907895614508140299
+    second: InGameIcons128px_10
+  - first:
+      213: -5598399283796518394
+    second: InGameIcons128px_11
+  - first:
+      213: -7152898756886263633
+    second: InGameIcons128px_12
+  - first:
+      213: -4659738601975876706
+    second: InGameIcons128px_13
+  - first:
+      213: 3543223299701721642
+    second: InGameIcons128px_14
+  - first:
+      213: -6305401669593566992
+    second: InGameIcons128px_15
+  - first:
+      213: 3554683484714258532
+    second: InGameIcons128px_16
+  - first:
+      213: 788003824601855502
+    second: InGameIcons128px_17
+  - first:
+      213: 4601445949709093687
+    second: InGameIcons128px_18
+  - first:
+      213: 4801880257007826888
+    second: InGameIcons128px_19
+  - first:
+      213: 7991465919225029420
+    second: InGameIcons128px_20
+  - first:
+      213: 1884175236927294434
+    second: InGameIcons128px_21
+  - first:
+      213: 234831550411789060
+    second: InGameIcons128px_22
+  - first:
+      213: -3038564022962120903
+    second: InGameIcons128px_23
+  - first:
+      213: 8778703120942412605
+    second: InGameIcons128px_24
+  - first:
+      213: 3002386274403291007
+    second: InGameIcons128px_25
+  - first:
+      213: -3650891904233958506
+    second: InGameIcons128px_26
+  - first:
+      213: -7476006180927569450
+    second: InGameIcons128px_27
+  - first:
+      213: -2337109435709143815
+    second: InGameIcons128px_28
+  - first:
+      213: 637688617640358969
+    second: InGameIcons128px_29
+  - first:
+      213: 6961705563726954485
+    second: InGameIcons128px_30
+  - first:
+      213: 6471004746727004001
+    second: InGameIcons128px_31
+  - first:
+      213: -7971421205200619068
+    second: InGameIcons128px_32
+  - first:
+      213: 6110981081378089566
+    second: InGameIcons128px_33
+  - first:
+      213: 235054556832776462
+    second: InGameIcons128px_34
+  - first:
+      213: 5940254556258254381
+    second: InGameIcons128px_35
+  - first:
+      213: -2181571112166447030
+    second: InGameIcons128px_36
+  - first:
+      213: 7842003367132940254
+    second: InGameIcons128px_37
+  - first:
+      213: -4126929921449543075
+    second: InGameIcons128px_38
+  - first:
+      213: 4605779146532657754
+    second: InGameIcons128px_39
+  - first:
+      213: 1172374619776581747
+    second: InGameIcons128px_40
+  - first:
+      213: 1339943874416923265
+    second: InGameIcons128px_41
+  - first:
+      213: 521094360359946121
+    second: InGameIcons128px_42
+  - first:
+      213: -8497753537539206529
+    second: InGameIcons128px_43
+  - first:
+      213: 5573458204126937213
+    second: InGameIcons128px_44
+  - first:
+      213: -3055580007720124910
+    second: InGameIcons128px_45
+  - first:
+      213: 8225936245700927833
+    second: InGameIcons128px_46
+  - first:
+      213: 9042417814968876722
+    second: InGameIcons128px_47
+  - first:
+      213: -7863436480554609094
+    second: InGameIcons128px_48
+  - first:
+      213: -8586218154596023235
+    second: InGameIcons128px_49
+  - first:
+      213: 7525544698720392951
+    second: InGameIcons128px_50
+  - first:
+      213: 6966055593426260275
+    second: InGameIcons128px_51
+  - first:
+      213: -5476009255035329237
+    second: InGameIcons128px_52
+  - first:
+      213: 4738841587548966379
+    second: InGameIcons128px_53
+  - first:
+      213: 764270449987535524
+    second: InGameIcons128px_0
+  - first:
+      213: 7298541281752826435
+    second: InGameIcons128px_1
+  - first:
+      213: -7973695888313836477
+    second: InGameIcons128px_2
+  - first:
+      213: 2297123709333228128
+    second: InGameIcons128px_3
+  - first:
+      213: 4325008177109436076
+    second: InGameIcons128px_4
+  - first:
+      213: 7861439125576725990
+    second: InGameIcons128px_5
+  - first:
+      213: -607657115504643406
+    second: InGameIcons128px_6
+  - first:
+      213: -689096464235798438
+    second: InGameIcons128px_7
+  - first:
+      213: 619470689142818780
+    second: InGameIcons128px_8
+  - first:
+      213: 6538090439175348805
+    second: InGameIcons128px_9
+  - first:
+      213: 6628855014366056703
+    second: InGameIcons128px_54
+  - first:
+      213: -512472271663796008
+    second: InGameIcons128px_55
+  - first:
+      213: 7219410055677308139
+    second: InGameIcons128px_56
+  - first:
+      213: -5381865066485404557
+    second: InGameIcons128px_57
+  - first:
+      213: -844700411479070063
+    second: InGameIcons128px_58
+  - first:
+      213: -5474266735410219356
+    second: InGameIcons128px_59
+  - first:
+      213: 7841343311551657668
+    second: InGameIcons128px_60
+  - first:
+      213: -9004769007589667891
+    second: InGameIcons128px_61
+  - first:
+      213: -2490660833392075581
+    second: InGameIcons128px_62
+  - first:
+      213: 8830655208623241444
+    second: InGameIcons128px_63
+  - first:
+      213: 7298062264273042713
+    second: InGameIcons128px_64
+  - first:
+      213: 4371824072028666689
+    second: InGameIcons128px_65
+  - first:
+      213: -9197807086792472682
+    second: InGameIcons128px_66
+  - first:
+      213: 9207862030404353029
+    second: InGameIcons128px_67
+  - first:
+      213: -4459572899440385638
+    second: InGameIcons128px_68
+  - first:
+      213: 7101368268065061175
+    second: InGameIcons128px_69
+  - first:
+      213: 2430527825008655026
+    second: InGameIcons128px_70
+  - first:
+      213: 7303402139630412539
+    second: InGameIcons128px_71
+  - first:
+      213: -8571678877986291911
+    second: InGameIcons128px_72
+  - first:
+      213: 4537397862528062726
+    second: InGameIcons128px_73
+  - first:
+      213: -3648301683340511117
+    second: InGameIcons128px_74
+  - first:
+      213: 9096196998675727757
+    second: InGameIcons128px_75
+  - first:
+      213: -8959199438049838409
+    second: InGameIcons128px_76
+  - first:
+      213: 7931672663088538864
+    second: InGameIcons128px_77
+  - first:
+      213: 6315499336037878451
+    second: InGameIcons128px_78
+  - first:
+      213: 7873730700070406117
+    second: InGameIcons128px_79
+  - first:
+      213: 8377684466492405145
+    second: InGameIcons128px_80
+  - first:
+      213: -2419916466331914191
+    second: InGameIcons128px_81
+  - first:
+      213: 3000356874489553707
+    second: InGameIcons128px_82
+  - first:
+      213: 7628772164619075379
+    second: InGameIcons128px_0
+  - first:
+      213: -3103724069776517121
+    second: InGameIcons128px_1
+  - first:
+      213: 4015319765583378309
+    second: InGameIcons128px_2
+  - first:
+      213: -5088776652133581648
+    second: InGameIcons128px_3
+  - first:
+      213: -8013051409119943178
+    second: InGameIcons128px_4
+  - first:
+      213: -3486631863397033891
+    second: InGameIcons128px_5
+  - first:
+      213: -8136604752494012461
+    second: InGameIcons128px_6
+  - first:
+      213: -7514668333704961266
+    second: InGameIcons128px_7
+  - first:
+      213: 3201417858761528694
+    second: InGameIcons128px_8
+  - first:
+      213: 5911811872903482788
+    second: InGameIcons128px_9
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 1024
+    resizeAlgorithm: 1
+    textureFormat: 47
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: InGameIcons128px_0
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1152
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33ff1806dd7ded960800000000000000
+      internalID: 7628772164619075379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameIcons128px_1
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1152
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff7142c176b5de4d0800000000000000
+      internalID: -3103724069776517121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameIcons128px_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 896
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 587b33f7d0849b730800000000000000
+      internalID: 4015319765583378309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameIcons128px_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 896
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bcb64ca8980169b0800000000000000
+      internalID: -5088776652133581648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameIcons128px_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 640
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f56678c23cebc090800000000000000
+      internalID: -8013051409119943178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameIcons128px_5
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 640
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5859af0bcefc9fc0800000000000000
+      internalID: -3486631863397033891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameIcons128px_6
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d7d6d15619f41f80800000000000000
+      internalID: -8136604752494012461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameIcons128px_7
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e03a3a407f886b790800000000000000
+      internalID: -7514668333704961266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameIcons128px_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6759219a498bd6c20800000000000000
+      internalID: 3201417858761528694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InGameIcons128px_9
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ad49578399fa0250800000000000000
+      internalID: 5911811872903482788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
