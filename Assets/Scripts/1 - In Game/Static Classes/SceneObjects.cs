@@ -7,10 +7,10 @@ public static class SceneObjects
     public struct ObjectsOnScene{
         public GameObject[] AllObjects;
         public GameObject Player;
-        public GameObject[] Boxes, EnergyBoxes, Floors, ElevatorFloors, ActivatorFloors, Wires, Switches, Targets, Zelevators, Xelevators;
+        public GameObject[] Boxes, EnergyBoxes, Floors, ElevatorFloors, ActivatorFloors, Wires, Switches, Targets, Zelevators, Xelevators, Flasks;
     }
 
-    static string[] GameTags = {"Player", "Box", "Energy Box", "Floor","Elevator Floor", "Activator Floor", "Wire", "Switch", "Target", "Elevator", "Elevator X", "Flasc"};
+    static string[] GameTags = {"Player", "Box", "Energy Box", "Floor","Elevator Floor", "Activator Floor", "Wire", "Switch", "Target", "Elevator", "Elevator X", "Flask"};
 
     public static ObjectsOnScene GetObjectsOnScene(){return sceneObjects;}
 
@@ -36,6 +36,8 @@ public static class SceneObjects
 
         sceneObjects.Zelevators = GameObject.FindGameObjectsWithTag(GameTags[9]);
         sceneObjects.Xelevators = GameObject.FindGameObjectsWithTag(GameTags[10]);
+
+        //sceneObjects.Flascs = GameObject.FindGameObjectsWithTag(GameTags[11]); //in game is tag 19
     }
 
     static void CalculateAllObjects()

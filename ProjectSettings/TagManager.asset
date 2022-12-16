@@ -23,7 +23,9 @@ TagManager:
   - ActivatorFloor
   - Activator Floor
   - Elevator Floor
-  - Flasc
+  - Flask
+  - Toxic
+  - LaserReceptor
   layers:
   - Default
   - TransparentFX

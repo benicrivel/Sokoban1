@@ -5,6 +5,13 @@ using UnityEngine.InputSystem;
 
 public class InputSystem : MonoBehaviour
 {
+    Player p;
+
+    private void Start()
+    {
+        p = gameObject.GetComponent<Player>();
+    }
+
     void OnBack()
     {
         int StepLength = UndoSystem.Steps.Length;
@@ -49,6 +56,8 @@ public class InputSystem : MonoBehaviour
             float Rot = 90.0f;
 
             PlayerMovement.AddMoveStep(Delta, Rot);
+
+            p.LookUp();
         }
         else
         {
@@ -58,6 +67,8 @@ public class InputSystem : MonoBehaviour
                 float Rot = 180.0f;
 
                 PlayerMovement.AddMoveStep(Delta, Rot);
+
+                p.LookRight();
             }
             else
             {
@@ -67,6 +78,8 @@ public class InputSystem : MonoBehaviour
                     float Rot = 270.0f;
 
                     PlayerMovement.AddMoveStep(Delta, Rot);
+
+                    p.LookDown();
                 }
                 else
                 {
@@ -76,6 +89,8 @@ public class InputSystem : MonoBehaviour
                         float Rot = 0.0f;
 
                         PlayerMovement.AddMoveStep(Delta, Rot);
+
+                        p.LookLeft();
                     }
                 }
             }

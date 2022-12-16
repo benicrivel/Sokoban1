@@ -64,4 +64,24 @@ public class Player : MonoBehaviour
         SavePositionOnEnd = false;
         isWalking = true;
     }
+
+    public void LookUp()
+    {
+        gameObject.transform.rotation = new Quaternion(0, 270, 0, 0);
+    }
+
+    public void LookRight()
+    {
+        gameObject.transform.rotation = new Quaternion(0, 0, 0, 0);
+    }
+
+    public void LookDown()
+    {
+        gameObject.transform.rotation = new Quaternion(0, 90, 0, 0);
+    }
+
+    public void LookLeft()
+    {
+        gameObject.transform.rotation = new Quaternion(0, 180, 0, 0);
+    }
 }
