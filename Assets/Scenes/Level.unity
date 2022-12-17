@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c302d09c03ac844a99159ea2d8af76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextLevelCalled: 0
+  NextLevelCalled: 1
   GameCompleted: 0
   GameStarted: 0
 --- !u!4 &21916044
@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8065f1e84705f994e87dc1083cdcbf63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelToOpen: 1
+  LevelToOpen: 15
   PixelMap:
   - {fileID: 2800000, guid: befb381bff82aa54283f658c8d19113a, type: 3}
   - {fileID: 2800000, guid: a1a3a9405adcecb42acf14c44794a625, type: 3}
@@ -2570,7 +2570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8065f1e84705f994e87dc1083cdcbf63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelToOpen: 7
+  LevelToOpen: 1
   PixelMap:
   - {fileID: 2800000, guid: 6ed8d9cbcc892d647991e82aaefdc568, type: 3}
   - {fileID: 2800000, guid: 09b1e713090e9224eb6bf334d2fd2bf6, type: 3}
