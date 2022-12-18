@@ -26,6 +26,14 @@ TagManager:
   - Flask
   - Toxic
   - LaserReceptor
+  - TP1
+  - TP1A
+  - TP2
+  - TP2A
+  - TP3
+  - TP3A
+  - TP4
+  - TP4A
   layers:
   - Default
   - TransparentFX

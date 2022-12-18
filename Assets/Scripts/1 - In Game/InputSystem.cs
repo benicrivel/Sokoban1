@@ -5,11 +5,13 @@ using UnityEngine.InputSystem;
 
 public class InputSystem : MonoBehaviour
 {
+    [SerializeField]
+    private Transform playerT;
     Player p;
 
     private void Start()
     {
-        p = gameObject.GetComponent<Player>();
+        playerT = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     void OnBack()
@@ -57,7 +59,8 @@ public class InputSystem : MonoBehaviour
 
             PlayerMovement.AddMoveStep(Delta, Rot);
 
-            p.LookUp();
+
+            //p.LookUp();
         }
         else
         {
@@ -68,7 +71,9 @@ public class InputSystem : MonoBehaviour
 
                 PlayerMovement.AddMoveStep(Delta, Rot);
 
-                p.LookRight();
+                //p.LookRight();
+
+                playerT.rotation = new Quaternion(0, 0, 0, 0);
             }
             else
             {
@@ -79,7 +84,9 @@ public class InputSystem : MonoBehaviour
 
                     PlayerMovement.AddMoveStep(Delta, Rot);
 
-                    p.LookDown();
+                    //p.LookDown();
+
+                    playerT.rotation = new Quaternion(0, 90, 0, 0);
                 }
                 else
                 {
@@ -90,7 +97,9 @@ public class InputSystem : MonoBehaviour
 
                         PlayerMovement.AddMoveStep(Delta, Rot);
 
-                        p.LookLeft();
+                        //p.LookLeft();
+
+                        p.transform.rotation = new Quaternion(0, 180, 0, 0);
                     }
                 }
             }

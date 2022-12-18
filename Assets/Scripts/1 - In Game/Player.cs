@@ -65,6 +65,7 @@ public class Player : MonoBehaviour
         isWalking = true;
     }
 
+    /*
     public void LookUp()
     {
         gameObject.transform.rotation = new Quaternion(0, 270, 0, 0);
@@ -83,5 +84,6 @@ public class Player : MonoBehaviour
     public void LookLeft()
     {
         gameObject.transform.rotation = new Quaternion(0, 180, 0, 0);
-    }
+    }*/
+
 }

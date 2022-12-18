@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3457737950029558038}
   - component: {fileID: 1966256945644304009}
+  - component: {fileID: 7867748634073861830}
   m_Layer: 0
   m_Name: LaserReceptor
   m_TagString: LaserReceptor
@@ -54,6 +55,18 @@ MonoBehaviour:
   WalkOnActiveFloor: 0
   WalkOnWire: 0
   WalkOnSwitch: 0
+--- !u!114 &7867748634073861830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3457737950029558042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82ca3cee8835d4a41ab40a9400859705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3915692182565468305
 PrefabInstance:
   m_ObjectHideFlags: 0

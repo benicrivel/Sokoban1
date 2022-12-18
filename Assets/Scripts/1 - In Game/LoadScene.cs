@@ -23,6 +23,14 @@ public class LoadScene : MonoBehaviour
     public GameObject Box;
     public GameObject Target;
     public GameObject EnergyBox;
+    public GameObject TP1;
+    public GameObject TP1A;
+    public GameObject TP2;
+    public GameObject TP2A;
+    public GameObject TP3;
+    public GameObject TP3A;
+    public GameObject TP4;
+    public GameObject TP4A;
     public GameObject WireHor;
     public GameObject WireVer;
     public GameObject WireL_DR;
@@ -92,6 +100,14 @@ public class LoadScene : MonoBehaviour
             }
         }
 
+        if (PixelColor == new Color32(255, 255, 255, 255))
+        {
+            if (FloorHeight(x, z) > 0)
+            {
+                Instantiate(Floor, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+            }
+        }
+
         //Character
         if (PixelColor == new Color32(53, 255, 0, 255))
         {
@@ -129,6 +145,46 @@ public class LoadScene : MonoBehaviour
             Instantiate(ElevatorYFloor, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
         }
 
+        //Teleport
+        if (PixelColor == new Color32(73, 0, 54, 255))
+        {
+            Instantiate(TP1, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+        }
+
+        if (PixelColor == new Color32(73, 0, 43, 255))
+        {
+            Instantiate(TP1A, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+        }
+
+        if (PixelColor == new Color32(0, 0, 73, 255))
+        {
+            Instantiate(TP2, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+        }
+
+        if (PixelColor == new Color32(0, 0, 75, 255))
+        {
+            Instantiate(TP2A, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+        }
+
+        if (PixelColor == new Color32(0, 73, 38, 255))
+        {
+            Instantiate(TP3, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+        }
+
+        if (PixelColor == new Color32(0, 63, 38, 255))
+        {
+            Instantiate(TP3A, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+        }
+
+        if (PixelColor == new Color32(73, 69, 0, 255))
+        {
+            Instantiate(TP4, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+        }
+
+        if (PixelColor == new Color32(66, 69, 0, 255))
+        {
+            Instantiate(TP4A, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+        }
 
         //Wire
         if (PixelColor == new Color32(255, 248, 125, 255))
@@ -172,25 +228,28 @@ public class LoadScene : MonoBehaviour
         }
 
         //Laser
+        int posicao = z;
+
         if (PixelColor == new Color32(255, 107, 0, 255))
         {
-            Instantiate(LaserG_Up, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+            Instantiate(LaserG_Up, new Vector3(x, FloorHeight(x, z) +1 , posicao), transform.rotation);
         }
 
         if (PixelColor == new Color32(212, 89, 0, 255))
         {
-            Instantiate(LaserG_Right, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+            Instantiate(LaserG_Right, new Vector3(x, FloorHeight(x, z)+1, posicao), transform.rotation);
         }
 
         if (PixelColor == new Color32(130, 54, 0, 255))
         {
-            Instantiate(LaserG_Down, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+            Instantiate(LaserG_Down, new Vector3(x, FloorHeight(x, z)+1, posicao), transform.rotation);
         }
 
         if (PixelColor == new Color32(56, 23, 0, 255))
         {
-            Instantiate(LaserG_Left, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+            Instantiate(LaserG_Left, new Vector3(x, FloorHeight(x, z)+1, posicao), transform.rotation);
         }
+
 
         if (PixelColor == new Color32(194, 164, 0, 255))
         {
@@ -234,13 +293,21 @@ public class LoadScene : MonoBehaviour
             Instantiate(Flask4, new Vector3(x, FloorHeight(x, z) + 1f, z), transform.rotation);
         }
 
-        
+
         if (PixelMap2[LevelToOpen] != null)
         {
             Color PixelColor2 = PixelMap2[LevelToOpen].GetPixel(x, z);
 
             //Floor
-            if (PixelColor.a < 0.1f)
+            if (PixelColor2.a < 0.1f)
+            {
+                if (FloorHeight(x, z) > 0)
+                {
+                    Instantiate(Floor, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+                }
+            }
+
+            if (PixelColor2 == new Color32(255, 255, 255, 255))
             {
                 if (FloorHeight(x, z) > 0)
                 {
@@ -249,154 +316,204 @@ public class LoadScene : MonoBehaviour
             }
 
             //Character
-            if (PixelColor == new Color32(53, 255, 0, 255))
+            if (PixelColor2 == new Color32(53, 255, 0, 255))
             {
                 Instantiate(Floor, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
                 Instantiate(Character, new Vector3(x, FloorHeight(x, z) + 1.0f, z), transform.rotation);
             }
 
             //Box
-            if (PixelColor == new Color32(255, 243, 0, 255))
+            if (PixelColor2 == new Color32(255, 243, 0, 255))
             {
                 Instantiate(Floor, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
                 Instantiate(Box, new Vector3(x, FloorHeight(x, z) + 1.0f, z), transform.rotation);
             }
 
-            if (PixelColor == new Color32(242, 0, 255, 255))
+            if (PixelColor2 == new Color32(242, 0, 255, 255))
             {
                 Instantiate(Floor, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
                 Instantiate(EnergyBox, new Vector3(x, FloorHeight(x, z) + 1.0f, z), transform.rotation);
             }
 
             //Target
-            if (PixelColor == Color.red)
+            if (PixelColor2 == Color.red)
             {
                 Instantiate(Target, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
             }
 
             //Elevadores
-            if (PixelColor == new Color32(0, 0, 255, 255))
+            if (PixelColor2 == new Color32(0, 0, 255, 255))
             {
                 Instantiate(ElevatorXFloor, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
             }
 
-            if (PixelColor == new Color32(138, 0, 0, 255))
+            if (PixelColor2 == new Color32(138, 0, 0, 255))
             {
                 Instantiate(ElevatorYFloor, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
             }
 
+            //Teleport
+            if (PixelColor2 == new Color32(73, 0, 54, 255))
+            {
+                Instantiate(TP1, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+            }
+
+            if (PixelColor2 == new Color32(73, 0, 43, 255))
+            {
+                Instantiate(TP1A, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+            }
+
+            if (PixelColor2 == new Color32(0, 0, 73, 255))
+            {
+                Instantiate(TP2, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+            }
+
+            if (PixelColor2 == new Color32(0, 0, 75, 255))
+            {
+                Instantiate(TP2A, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+            }
+
+            if (PixelColor2 == new Color32(0, 73, 38, 255))
+            {
+                Instantiate(TP3, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+            }
+
+            if (PixelColor2 == new Color32(0, 63, 38, 255))
+            {
+                Instantiate(TP3A, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+            }
+
+            if (PixelColor2 == new Color32(73, 69, 0, 255))
+            {
+                Instantiate(TP4, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+            }
+
+            if (PixelColor2 == new Color32(66, 69, 0, 255))
+            {
+                Instantiate(TP4A, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+            }
 
             //Wire
-            if (PixelColor == new Color32(255, 248, 125, 255))
+            if (PixelColor2 == new Color32(255, 248, 125, 255))
             {
                 Instantiate(WireHor, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
             }
 
-            if (PixelColor == new Color32(255, 248, 53, 255))
+            if (PixelColor2 == new Color32(255, 248, 53, 255))
             {
                 Instantiate(WireVer, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
             }
 
-            if (PixelColor == new Color32(255, 221, 125, 255))
+            if (PixelColor2 == new Color32(255, 221, 125, 255))
             {
                 Instantiate(WireL_DR, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
             }
 
-            if (PixelColor == new Color32(255, 193, 127, 255))
+            if (PixelColor2 == new Color32(255, 193, 127, 255))
             {
                 Instantiate(WireL_DL, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
             }
 
-            if (PixelColor == new Color32(200, 221, 125, 255))
+            if (PixelColor2 == new Color32(200, 221, 125, 255))
             {
                 Instantiate(WireL_UR, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
             }
 
-            if (PixelColor == new Color32(168, 186, 106, 255))
+            if (PixelColor2 == new Color32(168, 186, 106, 255))
             {
                 Instantiate(WireL_UL, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
             }
 
-            if (PixelColor == new Color32(255, 212, 53, 255))
+            if (PixelColor2 == new Color32(255, 212, 53, 255))
             {
                 Instantiate(WireT_LUD, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
             }
 
-            if (PixelColor == new Color32(255, 140, 53, 255))
+            if (PixelColor2 == new Color32(255, 140, 53, 255))
             {
                 Instantiate(WireT_RUD, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
             }
 
             //Laser
-            if (PixelColor == new Color32(255, 107, 0, 255))
+
+            if (PixelColor2 == new Color32(255, 107, 0, 255))
             {
-                Instantiate(LaserG_Up, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+                Instantiate(LaserG_Up, new Vector3(x, FloorHeight(x, z) + 1, posicao), transform.rotation);
             }
 
-            if (PixelColor == new Color32(212, 89, 0, 255))
+            if (PixelColor2 == new Color32(212, 89, 0, 255))
             {
-                Instantiate(LaserG_Right, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+                Instantiate(LaserG_Right, new Vector3(x, FloorHeight(x, z) + 1, posicao), transform.rotation);
             }
 
-            if (PixelColor == new Color32(130, 54, 0, 255))
+            if (PixelColor2 == new Color32(130, 54, 0, 255))
             {
-                Instantiate(LaserG_Down, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+                Instantiate(LaserG_Down, new Vector3(x, FloorHeight(x, z) + 1, posicao), transform.rotation);
             }
 
-            if (PixelColor == new Color32(56, 23, 0, 255))
+            if (PixelColor2 == new Color32(56, 23, 0, 255))
             {
-                Instantiate(LaserG_Left, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+                Instantiate(LaserG_Left, new Vector3(x, FloorHeight(x, z) + 1, posicao), transform.rotation);
             }
 
-            if (PixelColor == new Color32(194, 164, 0, 255))
+
+            if (PixelColor2 == new Color32(194, 164, 0, 255))
             {
                 Instantiate(LaserReflector, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
             }
 
-            if (PixelColor == new Color32(255, 183, 103, 255))
+            if (PixelColor2 == new Color32(255, 183, 103, 255))
             {
                 Instantiate(LaserReceptor, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
             }
 
 
             //Flasks
-            if (PixelColor == new Color32(105, 0, 143, 255))
+            if (PixelColor2 == new Color32(105, 0, 143, 255))
             {
                 Instantiate(Floor, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
                 Instantiate(Toxic, new Vector3(x, FloorHeight(x, z) + 0.5f, z), transform.rotation);
             }
 
-            if (PixelColor == new Color32(0, 107, 255, 255))
+            if (PixelColor2 == new Color32(0, 107, 255, 255))
             {
                 Instantiate(Floor, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
                 Instantiate(Flask1, new Vector3(x, FloorHeight(x, z) + 1f, z), transform.rotation);
             }
 
-            if (PixelColor == new Color32(255, 0, 81, 255))
+            if (PixelColor2 == new Color32(255, 0, 81, 255))
             {
                 Instantiate(Floor, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
                 Instantiate(Flask2, new Vector3(x, FloorHeight(x, z) + 1f, z), transform.rotation);
             }
 
-            if (PixelColor == new Color32(188, 0, 255, 255))
+            if (PixelColor2 == new Color32(188, 0, 255, 255))
             {
                 Instantiate(Floor, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
                 Instantiate(Flask3, new Vector3(x, FloorHeight(x, z) + 1f, z), transform.rotation);
             }
 
-            if (PixelColor == new Color32(188, 255, 0, 255))
+            if (PixelColor2 == new Color32(188, 255, 0, 255))
             {
                 Instantiate(Floor, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
                 Instantiate(Flask4, new Vector3(x, FloorHeight(x, z) + 1f, z), transform.rotation);
             }
         }
-
+        
         if (PixelMap3[LevelToOpen] != null)
         {
-            Color PixelColor2 = PixelMap2[LevelToOpen].GetPixel(x, z);
+            Color PixelColor3 = PixelMap3[LevelToOpen].GetPixel(x, z);
 
             //Floor
-            if (PixelColor.a < 0.1f)
+            if (PixelColor3.a < 0.1f)
+            {
+                if (FloorHeight(x, z) > 0)
+                {
+                    Instantiate(Floor, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+                }
+            }
+
+            if (PixelColor3 == new Color32(255, 255, 255, 255))
             {
                 if (FloorHeight(x, z) > 0)
                 {
@@ -405,142 +522,184 @@ public class LoadScene : MonoBehaviour
             }
 
             //Character
-            if (PixelColor == new Color32(53, 255, 0, 255))
+            if (PixelColor3 == new Color32(53, 255, 0, 255))
             {
                 Instantiate(Floor, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
                 Instantiate(Character, new Vector3(x, FloorHeight(x, z) + 1.0f, z), transform.rotation);
             }
 
             //Box
-            if (PixelColor == new Color32(255, 243, 0, 255))
+            if (PixelColor3 == new Color32(255, 243, 0, 255))
             {
                 Instantiate(Floor, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
                 Instantiate(Box, new Vector3(x, FloorHeight(x, z) + 1.0f, z), transform.rotation);
             }
 
-            if (PixelColor == new Color32(242, 0, 255, 255))
+            if (PixelColor3 == new Color32(242, 0, 255, 255))
             {
                 Instantiate(Floor, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
                 Instantiate(EnergyBox, new Vector3(x, FloorHeight(x, z) + 1.0f, z), transform.rotation);
             }
 
             //Target
-            if (PixelColor == Color.red)
+            if (PixelColor3 == Color.red)
             {
                 Instantiate(Target, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
             }
 
             //Elevadores
-            if (PixelColor == new Color32(0, 0, 255, 255))
+            if (PixelColor3 == new Color32(0, 0, 255, 255))
             {
                 Instantiate(ElevatorXFloor, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
             }
 
-            if (PixelColor == new Color32(138, 0, 0, 255))
+            if (PixelColor3 == new Color32(138, 0, 0, 255))
             {
                 Instantiate(ElevatorYFloor, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
             }
 
+            //Teleport
+            if (PixelColor3 == new Color32(73, 0, 54, 255))
+            {
+                Instantiate(TP1, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+            }
+
+            if (PixelColor3 == new Color32(73, 0, 43, 255))
+            {
+                Instantiate(TP1A, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+            }
+
+            if (PixelColor3 == new Color32(0, 0, 73, 255))
+            {
+                Instantiate(TP2, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+            }
+
+            if (PixelColor3 == new Color32(0, 0, 75, 255))
+            {
+                Instantiate(TP2A, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+            }
+
+            if (PixelColor3 == new Color32(0, 73, 38, 255))
+            {
+                Instantiate(TP3, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+            }
+
+            if (PixelColor3 == new Color32(0, 63, 38, 255))
+            {
+                Instantiate(TP3A, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+            }
+
+            if (PixelColor3 == new Color32(73, 69, 0, 255))
+            {
+                Instantiate(TP4, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+            }
+
+            if (PixelColor3 == new Color32(66, 69, 0, 255))
+            {
+                Instantiate(TP4A, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+            }
 
             //Wire
-            if (PixelColor == new Color32(255, 248, 125, 255))
+            if (PixelColor3 == new Color32(255, 248, 125, 255))
             {
                 Instantiate(WireHor, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
             }
 
-            if (PixelColor == new Color32(255, 248, 53, 255))
+            if (PixelColor3 == new Color32(255, 248, 53, 255))
             {
                 Instantiate(WireVer, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
             }
 
-            if (PixelColor == new Color32(255, 221, 125, 255))
+            if (PixelColor3 == new Color32(255, 221, 125, 255))
             {
                 Instantiate(WireL_DR, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
             }
 
-            if (PixelColor == new Color32(255, 193, 127, 255))
+            if (PixelColor3 == new Color32(255, 193, 127, 255))
             {
                 Instantiate(WireL_DL, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
             }
 
-            if (PixelColor == new Color32(200, 221, 125, 255))
+            if (PixelColor3 == new Color32(200, 221, 125, 255))
             {
                 Instantiate(WireL_UR, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
             }
 
-            if (PixelColor == new Color32(168, 186, 106, 255))
+            if (PixelColor3 == new Color32(168, 186, 106, 255))
             {
                 Instantiate(WireL_UL, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
             }
 
-            if (PixelColor == new Color32(255, 212, 53, 255))
+            if (PixelColor3 == new Color32(255, 212, 53, 255))
             {
                 Instantiate(WireT_LUD, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
             }
 
-            if (PixelColor == new Color32(255, 140, 53, 255))
+            if (PixelColor3 == new Color32(255, 140, 53, 255))
             {
                 Instantiate(WireT_RUD, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
             }
 
             //Laser
-            if (PixelColor == new Color32(255, 107, 0, 255))
+
+            if (PixelColor3 == new Color32(255, 107, 0, 255))
             {
-                Instantiate(LaserG_Up, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+                Instantiate(LaserG_Up, new Vector3(x, FloorHeight(x, z) + 1, posicao), transform.rotation);
             }
 
-            if (PixelColor == new Color32(212, 89, 0, 255))
+            if (PixelColor3 == new Color32(212, 89, 0, 255))
             {
-                Instantiate(LaserG_Right, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+                Instantiate(LaserG_Right, new Vector3(x, FloorHeight(x, z) + 1, posicao), transform.rotation);
             }
 
-            if (PixelColor == new Color32(130, 54, 0, 255))
+            if (PixelColor3 == new Color32(130, 54, 0, 255))
             {
-                Instantiate(LaserG_Down, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+                Instantiate(LaserG_Down, new Vector3(x, FloorHeight(x, z) + 1, posicao), transform.rotation);
             }
 
-            if (PixelColor == new Color32(56, 23, 0, 255))
+            if (PixelColor3 == new Color32(56, 23, 0, 255))
             {
-                Instantiate(LaserG_Left, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
+                Instantiate(LaserG_Left, new Vector3(x, FloorHeight(x, z) + 1, posicao), transform.rotation);
             }
 
-            if (PixelColor == new Color32(194, 164, 0, 255))
+
+            if (PixelColor3 == new Color32(194, 164, 0, 255))
             {
                 Instantiate(LaserReflector, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
             }
 
-            if (PixelColor == new Color32(255, 183, 103, 255))
+            if (PixelColor3 == new Color32(255, 183, 103, 255))
             {
                 Instantiate(LaserReceptor, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
             }
 
 
             //Flasks
-            if (PixelColor == new Color32(105, 0, 143, 255))
+            if (PixelColor3 == new Color32(105, 0, 143, 255))
             {
                 Instantiate(Floor, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
                 Instantiate(Toxic, new Vector3(x, FloorHeight(x, z) + 0.5f, z), transform.rotation);
             }
 
-            if (PixelColor == new Color32(0, 107, 255, 255))
+            if (PixelColor3 == new Color32(0, 107, 255, 255))
             {
                 Instantiate(Floor, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
                 Instantiate(Flask1, new Vector3(x, FloorHeight(x, z) + 1f, z), transform.rotation);
             }
 
-            if (PixelColor == new Color32(255, 0, 81, 255))
+            if (PixelColor3 == new Color32(255, 0, 81, 255))
             {
                 Instantiate(Floor, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
                 Instantiate(Flask2, new Vector3(x, FloorHeight(x, z) + 1f, z), transform.rotation);
             }
 
-            if (PixelColor == new Color32(188, 0, 255, 255))
+            if (PixelColor3 == new Color32(188, 0, 255, 255))
             {
                 Instantiate(Floor, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
                 Instantiate(Flask3, new Vector3(x, FloorHeight(x, z) + 1f, z), transform.rotation);
             }
 
-            if (PixelColor == new Color32(188, 255, 0, 255))
+            if (PixelColor3 == new Color32(188, 255, 0, 255))
             {
                 Instantiate(Floor, new Vector3(x, FloorHeight(x, z), z), transform.rotation);
                 Instantiate(Flask4, new Vector3(x, FloorHeight(x, z) + 1f, z), transform.rotation);
