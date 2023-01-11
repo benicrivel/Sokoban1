@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8065f1e84705f994e87dc1083cdcbf63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelToOpen: 30
+  LevelToOpen: 10
   PixelMap:
   - {fileID: 2800000, guid: befb381bff82aa54283f658c8d19113a, type: 3}
   - {fileID: 2800000, guid: a1a3a9405adcecb42acf14c44794a625, type: 3}

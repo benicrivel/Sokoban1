@@ -9,6 +9,8 @@ public class BotaoSel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        FileBasedPrefs.SetInt("Level Max", 50);
+
         int levelmax = FileBasedPrefs.GetInt("Level Max");
 
         if (Nivel > levelmax)

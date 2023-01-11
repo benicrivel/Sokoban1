@@ -45,13 +45,14 @@ public class BoxMovement : MonoBehaviour
     {
         col.enabled = false;
         yield return new WaitForSeconds(2f);
-        col.enabled = true;
+        //col.enabled = true;
     }
 
     public void MoveAndSave(Vector3 Direction)
     {
         FinalPosition = transform.position + Direction;
         StartCoroutine("WaitToSavePosition", transform.position);
+        col.enabled = true;
         //BoxMove();
     }
 

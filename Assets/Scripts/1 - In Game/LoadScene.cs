@@ -51,10 +51,15 @@ public class LoadScene : MonoBehaviour
     public GameObject Flask3;
     public GameObject Flask4;
 
+    public StageSelect ss;
     void Awake()
     {
         //LevelToOpen = SaveSystem.LoadValue.LevelToOpen();
         //LevelToOpen = 8;
+
+        ss = FindObjectOfType<StageSelect>();
+
+        LevelToOpen = ss.stage;
 
         GenerateLevel();
     }
